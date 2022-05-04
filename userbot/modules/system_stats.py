@@ -17,7 +17,7 @@ from platform import uname
 from shutil import which
 from requests import get
 import os
-from userbot import (CMD_HELP, OWEN_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, bot, SEVGILI) # Yakında
+from userbot import (CMD_HELP, LAVAN_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, bot, SEVGILI) # Yakında
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from userbot.events import register
@@ -81,7 +81,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) \
             + str(stderr.decode().strip())
 
-        await event.edit(f"=== {OWEN_VERSION} === "
+        await event.edit(f"=== {LAVAN_VERSION} === "
                          f"`{LANG['VERSION']}: "
                          f"{verout}"
                          "` \n"
@@ -90,7 +90,7 @@ async def bot_ver(event):
                          "`")
     else:
         await event.edit(
-            "Owen Dinlemede!!!"
+            "Lavan Dinlemede!!!"
         )
 
 
@@ -144,7 +144,7 @@ async def amialive(e):
             await e.edit(PLUGIN_MESAJLAR['alive'].format(
                 telethon=version.__version__,
                 python=python_version(),
-                owen=OWEN_VERSION,
+                owen=LAVAN_VERSION,
                 plugin=len(CMD_HELP),
                 id=me.id,
                 username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
@@ -159,7 +159,7 @@ async def amialive(e):
                 PLUGIN_MESAJLAR['alive'].text = PLUGIN_MESAJLAR['alive'].text.format(
                     telethon=version.__version__,
                     python=python_version(),
-                    owen=OWEN_VERSION,
+                    owen=LAVAN_VERSION,
                     plugin=len(CMD_HELP),
                     id=me.id,
                     username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
@@ -188,8 +188,8 @@ async def asistanalive(ups):
         else:
             hitap = "❤️ Sayın Yöneticim"
         if ren == MYID:
-            OwenVer = str(OWEN_VERSION.replace("v","")) 
-            await ups.reply(f"__{hitap} Şuan Çalışmaktayım\n BotVer: {OWEN_VERSION} !__")
+            OwenVer = str(LAVAN_VERSION.replace("v","")) 
+            await ups.reply(f"__{hitap} Şuan Çalışmaktayım\n BotVer: {LAVAN_VERSION} !__")
         else:
             return
     else:
