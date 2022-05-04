@@ -24,7 +24,7 @@
 
 🇹🇷**Tarayıcı Kurulum / Online Setup**🇺🇲
 
-[![Run on Repl.it](https://repl.it/badge/github/Ber4tbey/Lavaninstaller)](https://repl.it/@Ber4tbey/Lavaninstaller)
+[![Run on Repl.it](https://repl.it/badge/github/Ber4tbey/Lavaninstaller)](https://repl.it/@Ber4tbey/Lavanuserbot)
 
 ### 🇹🇷 Elle Kurulum / Manual Setup 🇺🇲
 
