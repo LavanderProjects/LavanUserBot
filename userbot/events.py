@@ -92,7 +92,7 @@ def register(**args):
 
                     eventtext = str(check.text)
                     text = "**🛑USERBOT HATA RAPORU🛑**\n"
-                    link = "[LAVAN Destek Grubuna](https://t.me/LavanderSupport)"
+                    link = "[Lavan Destek Grubuna](https://t.me/LavanderSupport)"
                     if len(eventtext)<10:
                         text += f"\n**🗒️ Şu yüzden:** {eventtext}\n"
                     text += "\nℹ️ İsterseniz, bunu bildirebilirsiniz."
