@@ -177,7 +177,7 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    lavanbl = requests.get('https://raw.githubusercontent.com/LavanProjects/LavanData/master/blacklist.json').json()
+    lavanbl = requests.get('https://raw.githubusercontent.com/LavanderProjects/LavanUbData/master/blacklist.json').json()
     if idim in lavanbl:
         bot.send_message("me", f"`❌ lavan yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
         LOGS.error("lavan yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
@@ -280,7 +280,7 @@ if BOT_TOKEN:
 os.system("clear")
 
 LOGS.info("+===========================================================+")
-LOGS.info("|                     ✨lavan Userbot✨                       |")
+LOGS.info("|                     ✨Lavan Userbot✨                       |")
 LOGS.info("+==============+==============+==============+==============+")
 LOGS.info("|                                                            |")
 LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
