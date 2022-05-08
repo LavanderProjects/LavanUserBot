@@ -381,11 +381,11 @@ else:
     # pylint: devre dışı=geçersiz ad
     bot = TelegramClient("userbot", API_KEY, API_HASH)
 
-DEVS = 1422746074, 1044658315, #developer ayrıcalıkları olacak
 
 
 
-ASISTAN = 1899959408 # Bot yardımcısı
+
+ASISTAN = 5319669482 # Bot yardımcısı
 
 if os.path.exists("learning-data-root.check"):
     os.remove("learning-data-root.check")
