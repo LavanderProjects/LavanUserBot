@@ -118,6 +118,7 @@ def register(**args):
                     ftext += "\n\n--------USERBOT HATA GUNLUGU BITIS--------"
                     ftext += "\n\n================================\n"
                     ftext += f"====== BOTVER : {LAVAN_VERSION} ======\n"
+                    ftext += "======  Powered by LavanderProjects   ======"
                     ftext += "================================"
 
                     command = "git log --pretty=format:\"%an: %s\" -7"
