@@ -17,7 +17,7 @@ from platform import uname
 from shutil import which
 from requests import get
 import os
-from userbot import (CMD_HELP, LAVAN_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, bot, SEVGILI) # Yakında
+from userbot import (CMD_HELP, LAVAN_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, bot, SEVGILI, timelavan) # Yakında
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from userbot.events import register
@@ -145,6 +145,7 @@ async def amialive(e):
                 telethon=version.__version__,
                 python=python_version(),
                 lavan=LAVAN_VERSION,
+                worktime = await timelavan.get_readable_time((emit() - WORKTIME)),
                 plugin=len(CMD_HELP),
                 id=me.id,
                 username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
