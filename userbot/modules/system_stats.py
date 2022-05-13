@@ -9,7 +9,7 @@
 
 
 """ Sunucu hakkında bilgi veren UserBot modülüdür. """
-
+from time import time as emit
 from asyncio import create_subprocess_shell as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from asyncio import sleep
