@@ -30,12 +30,15 @@ import userbot.cmdhelp
 import glob
 
 ALIVE_MSG = [
+     "{username}, `Lavan {worktime} zamandır çalışıyor...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{lavan}`\n**Python sürümü    :** `{python}`\n**Plugin sayısı :** `{plugin}`\n——————————————\n**Emrine amadeyim dostum... 😇**",
     "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum` **{lavansahip}** ❤️ \n Bot Versiyonu: {lavan} ",
-    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{lavansahip}**, `lavanUserbot çalışıyor.` \n Bot Versiyonu: {lavan} ",
+    "
+    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{lavansahip}**, `LavanUserbot çalışıyor.` \n Bot Versiyonu: {lavan} ",
     "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{lavansahip}** \n Bot Versiyonu: {lavan} ",
     "✨ `lavanUserBot sahibinin emirlerine hazır...` \n Bot Versiyonu: {lavan} ",
     "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{lavansahip}**. \n Bot Versiyonu: {lavan} ",
     "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme` \n Bot Versiyonu: {lavan} ",
+    "Merhaba {lavansahip} , Ben senin tarafından seçilmiş, sana durmaksızın hizmet eden bir sekreterim👩🏻‍💻.
     "**Hey {lavansahip} **\n \n✨ Yüklenen Plugin Sayısı {plugin}\n \n👨🏼‍💻 Python Sürümü {python}\n \n⚡️Telethon Sürüm {telethon}\n \nBotun Sapa Sağlam Çalışıyor iyi günler :)☄️\n\n\n         Lavan Sürüm {lavan}"
 ]
 
@@ -55,6 +58,8 @@ DIZCILIK_STR = [
 ]
 
 AFKSTR = [
+    "🥸 Merhaba {first_name}!\n📴 Aradığınız kişi şu anda telefona cevap verememektedir.\n🤫 En son {last_seen_long} önce buradaydı.\n🔈 Sinyal tonundan sonra, mesajınızı tarifeniz üzerinden bırakabilirsiniz.\n\n💸 Mesaj ücreti ₺0.69'dir.\n\n 🔉 biiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiip!",
+    "🔻Merhaba {mention} 🤡.\n🔻Şu an burada değilim.\n🔻Bekle beni👤, 👻ansızın gelebilirim.\n🔻Son görülmem: {last_seen_long} ..\n🔻Ne zaman gelirim: bilemem, belkide hiç bir zaman.",
     "Şu an acele işim var, daha sonra mesaj atsan olmaz mı? Zaten yine geleceğim.",
     "Aradığınız kişi şu anda telefona cevap veremiyor. Sinyal sesinden sonra kendi tarifeniz üzerinden mesajınızı bırakabilirsiniz. Mesaj ücreti 49 kuruştur. \n`biiiiiiiiiiiiiiiiiiiiiiiiiiiiip`!",
     "Birkaç dakika içinde geleceğim. Fakat gelmezsem...\ndaha fazla bekle.",
@@ -79,7 +84,6 @@ AFKSTR = [
     "Şu an burada değilim....\nama öyleysem ...\n\nbu harika olmaz mıydı?",
     "Beni hatırladığına sevindim ama şuanda klavye bana çok uzak",
     "Belki İyiyim, Belki Kötüyüm Bilmiyorsun Ama AFK Olduğumu Görebiliyorsun"
-    "🔻Merhaba {mention} 🤡.\n🔻Şu an burada değilim.\n🔻Bekle beni👤, 👻ansızın gelebilirim.\n🔻Son görülmem: {last_seen_long} ..\n🔻Ne zaman gelirim: bilemem, belkide hiç bir zaman."
 ]
 
 KICKME_MSG = [
@@ -95,10 +99,24 @@ CV_MSG = [
 ]
 
 
-UNAPPROVED_MSG = ("`Hey olduğun yerde kal,!👨‍💻 Ben lavan. Endişelenme!\n\n`"
-                  "`Sahibim sana mesaj atma izni vermedi o yüzden sahibim seni onaylayana kadar bu mesajı alacaksın.. `"
-                  "`Lütfen sahibimin aktif olmasını bekleyin, o genellikle PM'leri onaylar.\n\n`"
-                  "`Bildiğim kadarıyla o kafayı yemiş insanlara PM izni vermiyor.`")
+UNAPPROVED_MSG = ("**Merhaba** {mention}."
+                  "👩**🏻‍💻Ben {lavansahip}  Sekreteriyim.**"
+                  "❎**Üzgünüm, Sahibim sizi onaylamamış.**"
+                  "🔃**Onaylayana kadar bu mesajı tekrar tekrar atacağım**"
+                  "✔️**Yakında sizi onaylar.**"
+                  "📜**Mesajınızı görmesi ve sizi onaylaması için sizi listeye alıyorum..**"
+                  "\n"
+                  "📜`Listeye alma işlemi başlatıldı....`"
+                  "🗃`Bilgiler alınıyor....`"
+                  "✅`Bilgiler alındı....`"
+                  "\n"
+                  " 👉**🏻Adınız:** {first_name}"
+                  " 👉**🏻Kullanıcı adınız:** {username}"
+                  "\n"
+                  "📜**Listeye alındınız.**"
+                  
+                 
+                 )
 
 DB = connect("learning-data-root.check")
 CURSOR = DB.cursor()
