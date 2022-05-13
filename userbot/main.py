@@ -35,8 +35,8 @@ ALIVE_MSG = [
     "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{lavansahip}** \n Bot Versiyonu: {lavan} ",
     "✨ `lavanUserBot sahibinin emirlerine hazır...` \n Bot Versiyonu: {lavan} ",
     "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{lavansahip}**. \n Bot Versiyonu: {lavan} ",
-    "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme` \n Bot Versiyonu: {lavan} "
-    "   **Hey {lavansahip} **\n \n✨ Yüklenen Plugin Sayısı {plugin}\n \n👨🏼‍💻 Python Sürümü {python}\n \n⚡️Telethon Sürüm {telethon}\n \nBotun Sapa Sağlam Çalışıyor iyi günler :)☄️\n\n\n         Lavan Sürüm {lavan}"
+    "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme` \n Bot Versiyonu: {lavan} ",
+    "**Hey {lavansahip} **\n \n✨ Yüklenen Plugin Sayısı {plugin}\n \n👨🏼‍💻 Python Sürümü {python}\n \n⚡️Telethon Sürüm {telethon}\n \nBotun Sapa Sağlam Çalışıyor iyi günler :)☄️\n\n\n         Lavan Sürüm {lavan}"
 ]
 
 DIZCILIK_STR = [
