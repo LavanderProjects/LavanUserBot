@@ -10,7 +10,7 @@ from telethon.errors import ChannelPrivateError
 # Thanks github.com/spechide for creating inline bot support.
 # LavanUserBot - Ber4tbey 
 """ UserBot hazırlanışı. """
-
+from .helpers import worktime as timelavan
 from lib2to3.pgen2.token import STRING
 import os
 import time
@@ -332,6 +332,9 @@ else:
 URL = 'https://raw.githubusercontent.com/LavanderProjects/LavanUBdata/master/force-update.check' 
 with open('force-update.check', 'wb') as load:
     load.write(get(URL).content)
+#Time
+WORKTIME = time.time()
+
 
 DB = connect("force-update.check")
 CURSOR = DB.cursor()
