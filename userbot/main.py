@@ -79,6 +79,7 @@ AFKSTR = [
     "Şu an burada değilim....\nama öyleysem ...\n\nbu harika olmaz mıydı?",
     "Beni hatırladığına sevindim ama şuanda klavye bana çok uzak",
     "Belki İyiyim, Belki Kötüyüm Bilmiyorsun Ama AFK Olduğumu Görebiliyorsun"
+    "🔻Merhaba {mention} 🤡.\n🔻Şu an burada değilim.\n🔻Bekle beni👤, 👻ansızın gelebilirim.\n🔻Son görülmem: {last_seen_long} ..\n🔻Ne zaman gelirim: bilemem, belkide hiç bir zaman."
 ]
 
 KICKME_MSG = [
