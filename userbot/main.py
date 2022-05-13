@@ -32,13 +32,13 @@ import glob
 ALIVE_MSG = [
      "{username}, `Lavan {worktime} zamandır çalışıyor...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{lavan}`\n**Python sürümü    :** `{python}`\n**Plugin sayısı :** `{plugin}`\n——————————————\n**Emrine amadeyim dostum... 😇**",
     "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum` **{lavansahip}** ❤️ \n Bot Versiyonu: {lavan} ",
-    "
+ 
     "🎆 `Endişelenme! Seni yanlız bırakmam.` **{lavansahip}**, `LavanUserbot çalışıyor.` \n Bot Versiyonu: {lavan} ",
     "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{lavansahip}** \n Bot Versiyonu: {lavan} ",
     "✨ `lavanUserBot sahibinin emirlerine hazır...` \n Bot Versiyonu: {lavan} ",
     "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{lavansahip}**. \n Bot Versiyonu: {lavan} ",
     "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme` \n Bot Versiyonu: {lavan} ",
-    "Merhaba {lavansahip} , Ben senin tarafından seçilmiş, sana durmaksızın hizmet eden bir sekreterim👩🏻‍💻.
+    "Merhaba {lavansahip} , Ben senin tarafından seçilmiş, sana durmaksızın hizmet eden bir sekreterim👩🏻‍💻.",
     "**Hey {lavansahip} **\n \n✨ Yüklenen Plugin Sayısı {plugin}\n \n👨🏼‍💻 Python Sürümü {python}\n \n⚡️Telethon Sürüm {telethon}\n \nBotun Sapa Sağlam Çalışıyor iyi günler :)☄️\n\n\n         Lavan Sürüm {lavan}"
 ]
 
