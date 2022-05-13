@@ -17,7 +17,7 @@ from platform import uname
 from shutil import which
 from requests import get
 import os
-from userbot import (CMD_HELP, LAVAN_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, bot, SEVGILI, timelavan) # Yakında
+from userbot import (CMD_HELP, LAVAN_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, bot, SEVGILI,WORKTIME, timelavan) # Yakında
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from userbot.events import register
