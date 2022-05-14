@@ -20,6 +20,90 @@ from telethon import events
 import base64
 from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS, LAVAN_VERSION, ForceVer
 from telethon.tl.functions.channels import JoinChannelRequest
+from userbot import PATTERNS, DEVS, STR2, STR3, STR4, STR5, bot
+import inspect
+from pathlib import Path
+
+
+CMD_LIST = {}
+
+def lavan_cmd(pattern=None, comSTR5=None, **args):
+    args["func"] = lambda e: e.via_bot_id is None
+    stack = inspect.stack()
+    previous_stack_frame = stack[1]
+    file_test = Path(previous_stack_frame.filename)
+    file_test = file_test.stem.replace(".py", "")
+    args.get("allow_sudo", False)
+    if pattern is not None:
+        if pattern.startswith(r"\#"):
+            args["pattern"] = re.compile(pattern)
+        elif pattern.startswith(r"^"):
+            args["pattern"] = re.compile(pattern)
+            cmd = pattern.replace("$", "").replace("^", "").replace("\\", "")
+            try:
+                CMD_LIST[file_test].append(cmd)
+            except BaseException:
+                CMD_LIST.update({file_test: [cmd]})
+        else:
+            if len(PATTERNS) == 2:
+                catreg = "^" + PATTERNS
+                reg = PATTERNS[1]
+            elif len(PATTERNS) == 1:
+                catreg = "^\\" + PATTERNS
+                reg = PATTERNS
+            args["pattern"] = re.compile(catreg + pattern)
+            if comSTR5 is not None:
+                cmd = reg + comSTR5
+            else:
+                cmd = (
+                    (reg + pattern).replace("$", "").replace("\\", "").replace("^", "")
+                )
+            try:
+                CMD_LIST[file_test].append(cmd)
+            except BaseException:
+                CMD_LIST.update({file_test: [cmd]})
+
+    if "allow_edited_updates" in args and args["allow_edited_updates"]:
+        del args["allow_edited_updates"]
+
+    return events.NewMessage(**args)
+
+
+def comSTR5(**args):
+    args["func"] = lambda e: e.via_bot_id is None
+
+    stack = inspect.stack()
+    previous_stack_frame = stack[1]
+    file_test = Path(previous_stack_frame.filename)
+    file_test = file_test.stem.replace(".py", "")
+
+    pattern = args.get("pattern")
+    allow_edited_updates = args.get("allow_edited_updates", False)
+    args["incoming"] = args.get("incoming", False)
+    args["outgoing"] = True
+    if bool(args["incoming"]):
+        args["outgoing"] = False
+
+    try:
+        if pattern is not None and not pattern.startswith("(?i)"):
+            args["pattern"] = "(?i)" + pattern
+    except BaseException:
+        pass
+
+    reg = re.compile("(.*)")
+    if pattern is not None:
+        try:
+            cmd = re.search(reg, pattern)
+            try:
+                cmd = cmd.group(1).replace("$", "").replace("\\", "").replace("^", "")
+            except BaseException:
+                pass
+            try:
+                CMD_LIST[file_test].append(cmd)
+            except BaseException:
+                CMD_LIST.update({file_test: [cmd]})
+        except BaseException:
+            pass
 
 
 def register(**args):
@@ -121,11 +205,11 @@ def register(**args):
                     ftext += "======  Powered by LavanderProjects   ======"
                     ftext += "================================"
 
-                    command = "git log --pretty=format:\"%an: %s\" -7"
+                    comSTR5 = "git log --pretty=format:\"%an: %s\" -7"
 
                     ftext += "\n\n\nSon 7 commit:\n"
 
-                    process = await asyncsubshell(command,
+                    process = await asyncsubshell(comSTR5,
                                                   stdout=asyncsub.PIPE,
                                                   stderr=asyncsub.PIPE)
                     stdout, stderr = await process.communicate()
@@ -150,10 +234,28 @@ def register(**args):
                     remove("error.log")
             else:
                 pass
-        if not disable_edited:
-            bot.add_event_handler(wrapper, events.MessageEdited(**args))
-        bot.add_event_handler(wrapper, events.NewMessage(**args))
-
+        if bot:
+            if not disable_edited:
+                bot.add_event_handler(wrapper, events.MessageEdited(**args))
+            bot.add_event_handler(wrapper, events.NewMessage(**args))
+        if STR2:
+            if not disable_edited:
+                STR2.add_event_handler(wrapper, events.MessageEdited(**args))
+            STR2.add_event_handler(wrapper, events.NewMessage(**args))
+        if STR3:
+            if not disable_edited:
+                STR3.add_event_handler(wrapper, events.MessageEdited(**args))
+            STR3.add_event_handler(wrapper, events.NewMessage(**args))
+        if STR4:
+            if not disable_edited:
+                STR4.add_event_handler(wrapper, events.MessageEdited(**args))
+            STR4.add_event_handler(wrapper, events.NewMessage(**args))
+        if STR5:
+            if not disable_edited:
+                STR5.add_event_handler(wrapper, events.MessageEdited(**args))
+            STR5.add_event_handler(wrapper, events.NewMessage(**args))
         return wrapper
 
     return decorator
+                
+            
