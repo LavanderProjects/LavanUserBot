@@ -97,8 +97,9 @@ async def get_call(event):
     return xx.call
 
 #Sudoİd
+SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r".")
 try:
-    SUDO_ID = set(int(x) for x in os.environ.get("SUDO_ID", "").split())
+    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_ID", "").split())
 except ValueError:
     raise Exception("Bir Kullanıcı İd si Belirtmek zorundasın.")
 
