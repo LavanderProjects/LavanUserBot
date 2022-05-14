@@ -1,6 +1,3 @@
-from telethon.errors import ChannelPrivateError
-
-
 # Copyright (C) 2021 The LavanProjects Company LLC.
 #
 # Licensed under the LavanProjects Public License, Version 1.c (the "License");
@@ -9,7 +6,11 @@ from telethon.errors import ChannelPrivateError
 
 # Thanks github.com/spechide for creating inline bot support.
 # LavanUserBot - Ber4tbey 
+
+
 """ UserBot hazırlanışı. """
+from telethon.errors import ChannelPrivateError
+from pytgcalls import PyTgCalls
 from .helpers import worktime as timelavan
 from lib2to3.pgen2.token import STRING
 import os
@@ -104,6 +105,10 @@ except ValueError:
 SILINEN_PLUGIN = {}
 # UserBot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
+STRING_2 = os.environ.get("STRING_2", None)
+STRING_3 = os.environ.get("STRING_3", None)
+STRING_4 = os.environ.get("STRING_4", None)
+STRING_5 = os.environ.get("STRING_5", None)
 
 # Kanal / Grup ID yapılandırmasını günlüğe kaydetme.
 BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", None))
@@ -322,6 +327,8 @@ for i in ALL_ROWS:
     forceVer.append(i[0])
 connect("force-surum.check").close() 
 
+DEVS = [5159148002] #Developer için ayrıcalıklar
+
 
 upVer = []
 if os.path.exists("force-update.check"):
@@ -367,25 +374,97 @@ for binary, path in binaries.items():
 
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 loop = None
+import sys
 
-#from stringowen import STR
 if STRING_SESSION:
-    # pylint: devre dışı=geçersiz ad
-    bot = TelegramClient(
-    StringSession(STRING_SESSION),
-    API_KEY,
-    API_HASH,
-    loop=loop,
-    connection=ConnectionTcpAbridged,
-    auto_reconnect=True,
-    connection_retries=None,
-)
+    session = StringSession(str(STRING_SESSION))
 else:
-    # pylint: devre dışı=geçersiz ad
-    bot = TelegramClient("userbot", API_KEY, API_HASH)
+    session = "LavanUserBot"
+try:
+    bot = TelegramClient(
+        session=session,
+        api_id=API_KEY,
+        api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    )
+    call_py = PyTgCalls(bot)
+except Exception as e:
+    print(f"STRING_SESSION - {e}")
+    sys.exit()
 
 
+if STRING_2:
+    session2 = StringSession(str(STRING_2))
+    STR2 = TelegramClient(
+        session=session2,
+        api_id=API_KEY,
+        api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    )
+    call_py2 = PyTgCalls(STR2)
+else:
+    call_py2 = None
+    STR2 = None
 
+
+if STRING_3:
+    session3 = StringSession(str(STRING_3))
+    STR3 = TelegramClient(
+        session=session3,
+        api_id=API_KEY,
+        api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    )
+    call_py3 = PyTgCalls(STR3)
+else:
+    call_py3 = None
+    STR3 = None
+
+
+if STRING_4:
+    session4 = StringSession(str(STRING_4))
+    STR4 = TelegramClient(
+        session=session4,
+        api_id=API_KEY,
+        api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    )
+    call_py4 = PyTgCalls(STR4)
+else:
+    call_py4 = None
+    STR4 = None
+from asyncio import get_event_loop
+LOOP = get_event_loop()
+if STRING_5:
+    session5 = StringSession(str(STRING_5))
+    STR5 = TelegramClient(
+        session=session5,
+        api_id=API_KEY,
+        api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    )
+    call_py5 = PyTgCalls(STR5)
+else:
+    call_py5 = None
+    STR5 = None
+
+
+async def update_restart_msg(chat_id, msg_id):
+    message = (
+        f"**LavanUserbot v{LAVAN_VERSION} is back up and running!**\n\n")
+     
+    await bot.edit_message(chat_id, msg_id, message)
+    return True
 
 
 ASISTAN = 5319669482 # Bot yardımcısı

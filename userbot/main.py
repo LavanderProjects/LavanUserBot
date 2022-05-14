@@ -28,7 +28,8 @@ from json import loads, JSONDecodeError
 import re
 import userbot.cmdhelp
 import glob
-
+from userbot.clients import lavan_userbot_on, multilavan
+from userbot import LOOP 
 ALIVE_MSG = [
      "{username}, `Lavan {worktime} zamandır çalışıyor...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{lavan}`\n**Python sürümü    :** `{python}`\n**Plugin sayısı :** `{plugin}`\n——————————————\n**Emrine amadeyim dostum... 😇**",
     "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum` **{lavansahip}** ❤️ \n Bot Versiyonu: {lavan} ",
@@ -193,7 +194,9 @@ def extractCommands(file):
                     # Komut = re.sub('(?<=\[.)[A-Za-z0-9_]*\]', '', Komut).replace('[', '')
                 CmdHelp.add_command(Komut, None, 'Bu plugin dışarıdan yüklenmiştir. Herhangi bir açıklama tanımlanmamıştır.')
             CmdHelp.add()
-
+             
+client = multilavan()
+total = 5 - client
 try:
     bot.start()
     idim = bot.get_me().id
@@ -270,7 +273,7 @@ try:
         bot.send_message("me", f"`Lütfen pluginlerin kalıcı olması için PLUGIN_CHANNEL_ID'i ayarlayın.`")
 
 
-   
+
 except PhoneNumberInvalidError:
     print(INVALID_PH)
     exit(1)
@@ -289,7 +292,7 @@ async def FotoDegistir (foto):
         return True
     except:
         return False
-
+LOOP.run_until_complete(lavan_userbot_on())
     
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
@@ -306,6 +309,7 @@ LOGS.info("|                                                            |")
 LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
           " Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/lavanSupport")
 LOGS.info(f"Bot versiyonunuz: lavan ==> {LAVAN_VERSION}")
+LOGS.info(f"Toplam Hesap = {total}")
 
 """
 if len(argv) not in (1, 3, 4):
