@@ -81,7 +81,7 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
     LANGUAGE = "DEFAULT"
     
 # Lavan versiyon
-LAVAN_VERSION = "v0.1"
+LAVAN_VERSION = "v0.2"
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 # Telegram API KEY ve HASH
