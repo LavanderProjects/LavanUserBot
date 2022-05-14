@@ -27,7 +27,7 @@ from pathlib import Path
 
 CMD_LIST = {}
 
-def lavan_cmd(pattern=None, comSTR5=None, **args):
+def lavan_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
@@ -52,8 +52,8 @@ def lavan_cmd(pattern=None, comSTR5=None, **args):
                 catreg = "^\\" + PATTERNS
                 reg = PATTERNS
             args["pattern"] = re.compile(catreg + pattern)
-            if comSTR5 is not None:
-                cmd = reg + comSTR5
+            if command is not None:
+                cmd = reg + command
             else:
                 cmd = (
                     (reg + pattern).replace("$", "").replace("\\", "").replace("^", "")
@@ -69,7 +69,7 @@ def lavan_cmd(pattern=None, comSTR5=None, **args):
     return events.NewMessage(**args)
 
 
-def comSTR5(**args):
+def command(**args):
     args["func"] = lambda e: e.via_bot_id is None
 
     stack = inspect.stack()
@@ -205,11 +205,11 @@ def register(**args):
                     ftext += "======  Powered by LavanderProjects   ======"
                     ftext += "================================"
 
-                    comSTR5 = "git log --pretty=format:\"%an: %s\" -7"
+                    command = "git log --pretty=format:\"%an: %s\" -7"
 
                     ftext += "\n\n\nSon 7 commit:\n"
 
-                    process = await asyncsubshell(comSTR5,
+                    process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
                                                   stderr=asyncsub.PIPE)
                     stdout, stderr = await process.communicate()
