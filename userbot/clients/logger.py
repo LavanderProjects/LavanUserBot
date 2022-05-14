@@ -16,7 +16,7 @@ from telethon.tl.types import ChatAdminRights
 
 from userbot import LAVAN_VERSION as version
 from userbot import BOTLOG_CHATID
-from userbot import CMD_HANDLER as cmd
+from userbot import PATTERNS as cmd
 from userbot import STR2, STR3, STR4, STR5, bot, branch, tgbot
 
 
