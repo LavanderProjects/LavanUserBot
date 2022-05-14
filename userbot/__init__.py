@@ -712,6 +712,7 @@ upVer = int(upVer[0])
 BRAIN_CHECKER = []
 COUNT_PM = {}
 LASTMSG = {}
+CMD_LIST = {}
 FUP = True
 ENABLE_KILLME = True
 ISAFK = False
