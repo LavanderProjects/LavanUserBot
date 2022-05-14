@@ -99,7 +99,7 @@ async def get_call(event):
 #Sudoİd
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r".")
 try:
-    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_ID", "").split())
+    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
 except ValueError:
     raise Exception("Bir Kullanıcı İd si Belirtmek zorundasın.")
 
@@ -184,7 +184,7 @@ REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
 # AUTO PP
 AUTO_PP = os.environ.get("AUTO_PP", None)
 
-
+SUDO_ID = set(int(x) for x in os.environ.get("SUDO_ID", "").split())
 #OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
 
 # Warn modül
