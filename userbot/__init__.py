@@ -61,7 +61,7 @@ if version_info[0] < 3 or version_info[1] < 6:
     LOGS.info("En az python 3.6 sürümüne sahip olmanız gerekir."
               "Birden fazla özellik buna bağlıdır. Bot kapatılıyor.")
     quit(1)
-
+branch = "master"
 # Yapılandırmanın önceden kullanılan değişkeni kullanarak düzenlenip düzenlenmediğini kontrol edin.
 # Temel olarak, yapılandırma dosyası için kontrol.
 CONFIG_CHECK = os.environ.get(
