@@ -14,7 +14,6 @@ from telethon.utils import get_peer_id
 from userbot import BOT_TOKEN
 from userbot import LAVAN_VERSION as version
 from userbot import (
-    DEFAULT,
     DEVS,
     LOGS,
     LOOP,
