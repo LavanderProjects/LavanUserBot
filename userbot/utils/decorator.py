@@ -17,8 +17,9 @@ from telethon.errors import (
 )
 PATTERNS = "."
 CMD_LIST = {}
+LOGS = {}
 from userbot import (
-    LOGS,
+
     STR2,
     STR3,
     STR4,
