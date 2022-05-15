@@ -15,7 +15,7 @@ from telethon.errors import (
     MessageIdInvalidError,
     MessageNotModifiedError,
 )
-from userbot import PATTERNS
+PATTERNS = "."
 from userbot import (
     CMD_LIST,
     LOGS,
