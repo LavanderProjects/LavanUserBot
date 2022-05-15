@@ -16,10 +16,9 @@ from telethon.errors import (
     MessageNotModifiedError,
 )
 PATTERNS = "."
+CMD_LIST = {}
 from userbot import (
-    CMD_LIST,
     LOGS,
-    PATTERNS,
     STR2,
     STR3,
     STR4,
