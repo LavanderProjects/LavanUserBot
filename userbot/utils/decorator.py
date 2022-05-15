@@ -18,17 +18,8 @@ from telethon.errors import (
 PATTERNS = "."
 CMD_LIST = {}
 LOGS = {}
-from userbot import (
+from userbot import STR2, STR3, STR4, STR5, SUDO_HANDLER, SUDO_USERS, bot, tgbot
 
-    STR2,
-    STR3,
-    STR4,
-    STR5,
-    SUDO_HANDLER,
-    SUDO_USERS,
-    bot,
-    tgbot,
-)
 
 from .tools import edit_delete
 
