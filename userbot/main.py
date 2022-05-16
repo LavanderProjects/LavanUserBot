@@ -57,6 +57,7 @@ DIZCILIK_STR = [
     "Çıkartma hapsediliyor...",
     "Bay dızcı bu çıkartmayı dızlıyor... ",
     "Bu güzel çıkartma neden benim paketimde de olmasın🤭",
+    "**Trrek çıkartmanı dızladım adam ol**"
 ]
 
 AFKSTR = [
