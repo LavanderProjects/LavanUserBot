@@ -48,6 +48,8 @@
 
 ### 🇹🇷 Geliştiriciler / Developers 🇺🇲
   [![Ber4tbey](https://github.com/Ber4tbey.png?size=100)](https://github.com/Ber4tbey)
+  
+  [![SakirBey1](https://github.com/SakirBey1.png?size=100)](https://github.com/SakirBey1)
  
 
 ## Credit
