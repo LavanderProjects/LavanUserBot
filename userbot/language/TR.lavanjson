@@ -987,10 +987,10 @@
             "EM1": "'<sebep>'",
             "EM2": "'Gruptaki Üyeleri Emojili Bir Şekilde Etiketler.'",
             "EM3": "'Etiketleme işlemini durdurur.'",
-            "EM4": "'👌 Neden yazmak Zorunda Değilsiniz @erdewbey'"
+            "EM4": "'👌 Neden yazmak Zorunda Değilsiniz @Ber4tbey'"
         },
         "fontlar": {
-            "FONT1": "'.font1-13 erdem bey şeklinde'"
+            "FONT1": "'.font1-13 Ber4tbey bey şeklinde'"
         },
         "gdrive": {
             "GD1": "'<dosya yolu / yanıtlayarak / URL|dosya-adı>'",
@@ -1030,7 +1030,7 @@
             "H3": "'Mevcut VARlarınızı elde edin, yalnızca botlog gurubunuzda ulaşabilirsiniz .'",
             "H4": "'del var <Var adı> Seçdiğiniz ConfigVarı siler sildikten sonra botunuza .restart atın.'",
             "H5": "'Heroku logunuza bakın'",
-            "H6": "'**Botlog grubundan çıktıysanız sizin yerinize düzeltmesi için** `.set var BOTLOG False` **yazın.. ✨ Thx to @erdewbey**'"
+            "H6": "'**Botlog grubundan çıktıysanız sizin yerinize düzeltmesi için** `.set var BOTLOG False` **yazın.. ✨ Thx to @Ber4tbey**'"
         },
         "hbilgi": {
             "HBLG": "'Hesabınız hakkında bilgi almanıza için.'"
@@ -1131,7 +1131,7 @@
         },
         "texts": {
             "TE1": "'kelimeleri daha süslü bir şekilde yazar oto renk ve font seçiimi yapar.'",
-            "TE2": "'modul bozuk değildir sadece geç çalışmaktadır ama yakın zamanda giderilecektir. @erdewbey'"
+            "TE2": "'modul bozuk değildir sadece geç çalışmaktadır ama yakın zamanda giderilecektir. @Ber4tbey'"
         },
         "tghp": {
             "TG1": "'<m/t>'",
