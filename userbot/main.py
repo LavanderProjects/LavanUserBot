@@ -94,6 +94,7 @@ KICKME_MSG = [
     "Sessizce çıkıyorum 🥴",
     "Haberin olmadan çıkarsam bir gün benim grupta olmadığı farkedeceksin.. O yüzden bu mesajı bırakıyorum🚪",
     "Hemen burayı terk etmeliyim🤭"
+    "**Ops Ben Kaçtım Bye bYe..**"
 ]
 
 CV_MSG = [
