@@ -30,7 +30,7 @@ import userbot.cmdhelp
 import glob
 from userbot.clients import lavan_userbot_on, multilavan
 from userbot import LOOP
-from userbot.utils import autobot, autopilot
+
 ALIVE_MSG = [
      "{username}, `Lavan {worktime} zamandır çalışıyor...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{lavan}`\n**Python sürümü    :** `{python}`\n**Plugin sayısı :** `{plugin}`\n——————————————\n**Emrine amadeyim dostum... 😇**",
     "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum` **{lavansahip}** ❤️ \n Bot Versiyonu: {lavan} ",
@@ -294,11 +294,11 @@ async def FotoDegistir (foto):
         return True
     except:
         return False
-LOOP.run_until_complete(lavan_userbot_on())
-if not BOTLOG_CHATID:
-    LOOP.run_until_complete(autopilot())
-if not BOT_TOKEN:
-    LOOP.run_until_complete(autobot())
+#LOOP.run_until_complete(lavan_userbot_on())
+#if not BOTLOG_CHATID:
+    #LOOP.run_until_complete(autopilot())
+#if not BOT_TOKEN:
+    #LOOP.run_until_complete(autobot())
     
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
