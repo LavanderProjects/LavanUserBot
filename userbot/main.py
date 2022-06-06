@@ -103,21 +103,7 @@ CV_MSG = [
 ]
 
 
-UNAPPROVED_MSG = ("**Merhaba** {mention}."
-                  "👩**🏻‍💻Ben {lavansahip}  Sekreteriyim.**"
-                  "❎**Üzgünüm, Sahibim sizi onaylamamış.**"
-                  "🔃**Onaylayana kadar bu mesajı tekrar tekrar atacağım**"
-                  "✔️**Yakında sizi onaylar.**"
-                  "📜**Mesajınızı görmesi ve sizi onaylaması için sizi listeye alıyorum..**"
-                  "\n"
-                  "📜`Listeye alma işlemi başlatıldı....`"
-                  "🗃`Bilgiler alınıyor....`"
-                  "✅`Bilgiler alındı....`"
-                  "\n"
-                  " 👉**🏻Adınız:** {first_name}"
-                  " 👉**🏻Kullanıcı adınız:** {username}"
-                  "\n"
-                  "📜**Listeye alındınız.**"
+UNAPPROVED_MSG = ("Hey! {mention} Merhaba. \n👩🏻‍💻Ben {lavansahip}  Sekreteriyim. \n❎Üzgünüm, Sahibim sizi onaylamamış. \n🔃Onaylayana kadar bu mesajı tekrar tekrar atacağım \n\n✔️Yakında sizi onaylar. \n📜Mesajınızı görmesi ve sizi onaylaması için sizi listeye alıyorum.. \n \n \n📜Listeye alma işlemi başlatıldı.... \n🗃Bilgiler alınıyor.... \n✅Bilgiler alındı.... \n \n \n👉🏻Adınız: {first_name} \n👉🏻Kullanıcı adınız: {username} \n \n📜Listeye alındınız. "
                   
                  
                  )
