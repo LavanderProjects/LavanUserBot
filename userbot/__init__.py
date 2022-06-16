@@ -282,7 +282,7 @@ PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @LavanUserBot Paketi |")
 # Userbotu kapatmak için gruplar
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 
-if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Owen Support grubu eklenir.
+if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Lavan Support grubu eklenir.
     BLACKLIST_CHAT = [1197341555,1168760410]
 
 # Otomatik Katılma ve güncellemeler
@@ -298,7 +298,7 @@ if HEROKU_APPNAME is not None and HEROKU_APIKEY is not None:
     Heroku = heroku3.from_key(HEROKU_APIKEY)
     app = Heroku.app(HEROKU_APPNAME)
     heroku_var = app.config()
-    #String session gizleme - Ber4tbey
+    #String session gizleme - Ber4tbey - SakirBey                                                           A,E,Ü,Ğ #
 """if STRING_SESSION:
     LOGS.info("String Session gizleniyor.")
     dosya = open("stringowen.py","w",encoding="utf-8")
@@ -548,6 +548,7 @@ with bot:
         bot(JoinChannelRequest("@LavanderSupport"))
         bot(JoinChannelRequest("@LavanderProjects"))
         bot(JoinChannelRequest("@DisOwen"))
+        bot(JoinChannelRequest("@SakirBey2"))
         
 
     except:
@@ -585,7 +586,7 @@ with bot:
                 veriler = (butonlastir(0, sorted(CMD_HELP)))
                 result = await builder.article(
                     f"Lütfen Sadece .yardım Komutu İle Kullanın",
-                    text=f"**En Gelişmiş UserBot!** [Owen](https://t.me/LavanUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{veriler[0]}",
+                    text=f"**En Gelişmiş UserBot!** [Lavan](https://t.me/LavanUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{veriler[0]}",
                     buttons=veriler[1],
                     link_preview=False
                 )
