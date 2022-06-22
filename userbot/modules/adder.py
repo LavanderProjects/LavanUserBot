@@ -100,4 +100,4 @@ async def get_users(event):
 # SakirBey1 Modülü :)
 CmdHelp('adder').add_command(
  'adder', 'Komutunu Yazarak Çalıştıra Bilirsiniz.', 'Bu Plugin Başka Bi Grubtan Üye Eklemek İçindir'
-).add_info('Bu Plugin [SakirBey](t.me/SakirBey1) Tarafından [Lavan UserBot](t.me/MajesteUserBot) İçin Yazılmıştır.!').add()
+).add_info('Bu Plugin [SakirBey](t.me/SakirBey1) Tarafından [Lavan UserBot](t.me/LavanUserBot) İçin Yazılmıştır.!').add()
