@@ -33,7 +33,7 @@ from wikipedia import summary
 from wikipedia.exceptions import DisambiguationError, PageError
 from urbandict import define
 from requests import get
-#from search_engine_parser import GoogleSearch
+from search_engine_parser import GoogleSearch
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from google_trans_new import LANGUAGES, google_translator
@@ -398,7 +398,7 @@ async def moni(event):
         return
 
 
-"""@register(outgoing=True, pattern=r"^.google ?(.*)")
+@register(outgoing=True, pattern=r"^.google ?(.*)")
 async def gsearch(q_event):
  
     match = q_event.pattern_match.group(1)
@@ -429,7 +429,7 @@ async def gsearch(q_event):
         await q_event.client.send_message(
             BOTLOG_CHATID,
             match + "`Sözcük başarıyla Google'da aratıldı!`",
-        )"""
+        )
 
 
 @register(outgoing=True, pattern=r"^.wiki (.*)")
