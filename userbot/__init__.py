@@ -298,16 +298,7 @@ if HEROKU_APPNAME is not None and HEROKU_APIKEY is not None:
     Heroku = heroku3.from_key(HEROKU_APIKEY)
     app = Heroku.app(HEROKU_APPNAME)
     heroku_var = app.config()
-    #String session gizleme - Ber4tbey - SakirBey                                                           A,E,Ü,Ğ #
-"""if STRING_SESSION:
-    LOGS.info("String Session gizleniyor.")
-    dosya = open("stringowen.py","w",encoding="utf-8")
-    dosya.write("STR = '{}'".format(STRING_SESSION))
-    dosya.close()
-    LOGS.info("Stringiniz Gizlendi Botunuz yeniden başlatılıyor...")
-    del heroku_var['STRING_SESSION']
-    heroku_var['STRING_SESSION'] = None
-    heroku_api = "https://api.heroku.com"""
+
 # Bot versiyon kontrolü
 forceVer = []
 if os.path.exists("force-surum.check"):
@@ -548,9 +539,6 @@ with bot:
         bot(JoinChannelRequest("@LavanderSupport"))
         bot(JoinChannelRequest("@LavanderProjects"))
         bot(JoinChannelRequest("@DisOwen"))
-        bot(JoinChannelRequest("@SakirBey2"))
-        
-
     except:
         pass
  
