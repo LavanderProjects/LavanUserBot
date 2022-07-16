@@ -9,7 +9,7 @@ from telethon.tl.functions.messages import GetFullChatRequest
 
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
-from userbot.events import register as berat
+from userbot.events import register as sakir
 from userbot import bot, BLACKLIST_CHAT
 
 async def get_chatinfo(event):
@@ -56,41 +56,46 @@ def user_full_name(user):
     return full_name
 
 
-@berat(outgoing=True, disable_errors=True, groups_only=True, pattern=r"^\.adder (.*)")
+@sakir(outgoing=True, disable_errors=True, groups_only=True, pattern=r"^\.adder (.*)")
 async def get_users(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await event.edit("Resmi Grupta Bunu Kullanamazsın.")
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        berat = await event.edit("`Kullanıcı Listesi Alınıyor...`")
+        sakir = await event.edit("`Kullanıcı Listesi Alınıyor...`")
     else:
-        berat = await event.edit("`Üyeler Ekleniyor...`")
+        sakir = await event.edit("`Üyeler Ekleniyor...`")
     farid = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await berat.edit("`Kullanıcı Listesi Alınamadı.`")
+        return await sakir.edit("`Kullanıcı Listesi Alınamadı.`")
     s = 0
     f = 0
     error = "None"
 
-    await berat.edit("**Lavan UserBot ADDER**\n\n`Üyeler Ekleniyor...`")
+    await sakir.edit("**Lavan UserBot ADDER**\n\n`Üyeler Ekleniyor...`")
     async for user in event.client.iter_participants(farid.full_chat.id):
         try:
             if error.startswith("Too"):
-                return await berat.edit(
+                return await sakir.edit(
                     f"**Lavan UserBot ADDER**\n `Spamdasınız Galiba Emin Olmak İçin .sinfo Yazarak Kontrol Edebilirsiniz.` \nHata \n`{error}` \n\n `{s}` Üyeler Eklendi.\n `{f}` Kullanıcı Eklenemedi."
                 )
             await event.client(
                 functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
             )
             s = s + 1
-            await berat.edit(
+            await sakir.edit(
                 f"**Lavan UserBot ADDER**\n\n`{s}` Üyeler Eklendi.\n`{f}` Kullanıcı Eklenemedi \n\n**Hata:** `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await berat.edit(
+    return await sakir.edit(
         f"**Lavan UserBot ADDER** \n\nBaşarılı İşlem: ✔️ `{s}` .\nBaşarısız İşlem: ❌ `{f}`"
     )
+
+
+CmdHelp('adder').add_command(
+	'adder', 'Yazarak Çalıştıra Bilirsiniz', 'Bu Plugin LavanUserbot İçin Yapılmıştır', '.adder @lavandersupport'
+).add_info('Bu Plugin [LavanUserBot](t.me/LavanderSupport) İçin yapılmıştır').add()
