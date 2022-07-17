@@ -208,7 +208,7 @@ async def pins(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.Lavan {cmdhelp}` __yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.lavan {cmdhelp}` __yazın.__')
             else:
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
@@ -217,12 +217,12 @@ async def pins(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.Lavan {cmdhelp}` __yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.lavan {cmdhelp}` __yazın.__')
             else:
                 dosyaAdi = reply_message.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi**\n__Modülün  Kullanımını Öğrenmek İçin__ `.Lavan {dosyaAdi}` __yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi**\n__Modülün  Kullanımını Öğrenmek İçin__ `.lavan {dosyaAdi}` __yazın.__')
             
 @register(outgoing=True, pattern="^.zinstall")
 async def pins(event):
@@ -275,7 +275,7 @@ async def pins(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.Lavan {cmdhelp}` __yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.lavan {cmdhelp}` __yazın.__')
             else:
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
@@ -284,12 +284,12 @@ async def pins(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.Lavan {cmdhelp}` __yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.lavan {cmdhelp}` __yazın.__')
             else:
                 dosyaAdi = reply_message.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi**\n__Modülün  Kullanımını Öğrenmek İçin__ `.Lavan {dosyaAdi}` __yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi**\n__Modülün  Kullanımını Öğrenmek İçin__ `.lavan {dosyaAdi}` __yazın.__')
             
 @register(outgoing=True, pattern="^.ptest")
 async def ptest(event):
@@ -466,7 +466,7 @@ async def pinsasistan(ups):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await usp.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.Lavan {cmdhelp}` __yazın.__')
+                return await usp.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.lavan {cmdhelp}` __yazın.__')
             else:
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
@@ -475,9 +475,9 @@ async def pinsasistan(ups):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await usp.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.Lavan {cmdhelp}` __yazın.__')
+                return await usp.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.lavan {cmdhelp}` __yazın.__')
             else:
                 dosyaAdi = reply_message.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await usp.edit(f'**Modül Başarıyla Yüklendi**\n__Modülün  Kullanımını Öğrenmek İçin__ `.Lavan {dosyaAdi}` __yazın.__')
+                return await usp.edit(f'**Modül Başarıyla Yüklendi**\n__Modülün  Kullanımını Öğrenmek İçin__ `.lavan {dosyaAdi}` __yazın.__')
