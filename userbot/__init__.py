@@ -280,10 +280,8 @@ SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @LavanUserBot Paketi |")
 
 # Userbotu kapatmak için gruplar
-BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 
-if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Lavan Support grubu eklenir.
-    BLACKLIST_CHAT = [1698661722]
+BLACKLIST_CHAT = [1698661722]
 
 # Otomatik Katılma ve güncellemeler
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
