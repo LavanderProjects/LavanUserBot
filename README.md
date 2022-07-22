@@ -22,6 +22,9 @@
 
 `bash <(curl -L https://bit.ly/3kHPOvK)`
 
+**Termux Current Version**
+[Termux](https://www.dosya.tc/server37/d6ith3/Termux.apk.html)
+
 🇹🇷**Tarayıcı Kurulum / Online Setup**🇺🇲
 
 [![Run on Repl.it](https://repl.it/badge/github/Ber4tbey/Lavaninstaller)](https://repl.it/@Ber4tbey/Lavanuserbot)
