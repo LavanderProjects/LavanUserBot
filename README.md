@@ -20,7 +20,7 @@
 
 **Android:** 
 
-`bash <(curl -L https://bit.ly/3kHPOvK)`
+`bash <(curl -L bit.ly/3PdQR4d)`
 
 **Termux Current Version**
 [Termux](https://www.dosya.tc/server37/d6ith3/Termux.apk.html)
