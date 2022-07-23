@@ -65,5 +65,5 @@ async def github(event):
                 await event.edit(REPLY)
 
 CmdHelp('git').add_command(
-    'git', '<kullanıcı adı>', 'Hedeflenen kişinin GitHub bilgilerini gösterir.', '.git SakirBey'
+    'git', LANG['GH1'], LANG['GH2'], LANG['GH3']
 ).add()
