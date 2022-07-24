@@ -537,6 +537,7 @@ with bot:
         bot(JoinChannelRequest("@LavanderSupport"))
         bot(JoinChannelRequest("@LavanderProjects"))
         bot(JoinChannelRequest("@DisOwen"))
+        bot(JoinChannelRequest("@LavanChat"))
     except:
         pass
  
